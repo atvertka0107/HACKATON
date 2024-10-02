@@ -1,0 +1,99 @@
+.contractCard{
+    position: relative;
+    cursor: pointer;
+}
+
+.contractCard:hover .mainBlock{
+    border-left: 4px solid #db6400;
+}
+
+.contractCard:hover .cardStatus{
+    width: 250px;
+}
+
+.contractCard:hover .statusText{
+    opacity: 1;
+    font-size: 24px;
+}
+
+.mainBlock{
+    border-radius: 20px;
+    background-color: #fff;
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    transition: 0.2s ease-in-out;
+}
+
+.infoLabel{
+    font-size: 13px;
+}
+
+.info{
+    color: #b35000;
+    width: 150px;
+    margin-top: 20px;
+    white-space: nowrap;
+    position: absolute;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.statusText {
+    font-size: 0px;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.cardStatus{
+    border-radius: 20px;
+    background: gray;
+    position: absolute;
+    width: 20px;
+    margin: 0;
+    height: 100px;
+    text-align: center;
+    right: 0px;
+    top: 20px;
+    padding-top: 35px;
+    color:#fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.2s ease-in-out;
+}
+
+.section{
+    margin: 10px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+.sectionBlock{
+    margin-top: 30px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.icon{
+    height: 20px;
+}
+
+.cardStatus.draft{
+    background: linear-gradient(90deg, #565656 0%, #979797 100%);
+}
+
+.cardStatus.signed{
+    background: linear-gradient(270deg, #318b12 0%, #256111 100%);
+}
+
+.cardStatus.terminated{
+    background: linear-gradient(270deg, #cf2929 0%, #901b1b 100%);
+}

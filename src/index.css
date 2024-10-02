@@ -17,13 +17,43 @@ input, select {
     box-sizing: border-box; 
     border-radius: 10px;
     border: 1px solid #fff;
+    transition: 0.2s;
+    outline:none;
+    font-size: 14px;
 }
+
+select {
+    cursor: pointer;
+}
+
+select option {
+    background: #F8F1F1;
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input:hover, select:hover{
+    border-right: 4px solid #db6400;
+    border-left: 4px solid #db6400;
+}
+
 
 h1{
     font-weight: 700;
     font-size: 28px;
     text-align: center;
     color: #292929;
+    margin-bottom: 50px;
+}
+h2{
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+    color: #313131;
     margin-bottom: 50px;
 }
 

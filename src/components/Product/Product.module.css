@@ -1,0 +1,66 @@
+.product{
+    position: relative;
+}
+
+.dot{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+.product:hover .mainBlock{
+    border-left: 4px solid #db6400;
+}
+
+.product:hover .dot{
+    right: 38px;
+    height: 35px;
+    width: 35px;
+}
+
+.mainBlock{
+    border-radius: 20px;
+    background-color: #fff;
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+    transition: 0.2s ease-in-out;
+}
+
+.line{
+    position: absolute;
+    left: 300px;
+    top: 28px;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.id{
+    color: #b35000;
+    margin-left: 2px;
+    font-size: 16px;
+    vertical-align: middle;
+    font-style: normal;
+}
+
+.arrow{
+    height: 13px;
+    vertical-align: middle;
+}
+
+.h2{
+    text-align: left;
+    white-space: nowrap;
+    width: 250px;
+    position: absolute;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

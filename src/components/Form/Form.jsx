@@ -1,16 +1,17 @@
 import classes from "./Form.module.css"
 import Button from "../Button/Button";
 import { useState } from 'react';
+import { forms_text } from "../../data";
 
 export default function Form(){
-    const [ID, setID] = useState('Osago');
+    const [ID, setID] = useState();
     const [dateBegin, setDateBegin] = useState();
     const [dateEnd, setDateEnd] = useState();
     const [premium, setPremium] = useState();
     const [insuranceSum, setInsuranceSum] = useState();
     const [insuredPersonId, setinsuredPersonId] = useState();
     const [ownerId, setOwnerId] = useState();
-    const [status, setStatus] = useState('draft');
+    const [status, setStatus] = useState();
     const [hasErrorOwner, setHasErrorOwner] = useState(false);
     const [hasErrorInsuredPerson, setHasErrorInsuredPerson] = useState(false);
     const [insSum, setInsSum] = useState();
@@ -58,20 +59,26 @@ export default function Form(){
         setInsSum(event.target.value.trim() ? <div className={classes.subtxt}>Страховая сумма: <span className={classes.sum}>{0.9*event.target.value}</span></div> : '')
     }
 
+    let optionsId = forms_text.id_options.map(function(item){
+        return <option value={item.id}>{item.name}</option>;
+    });
+
+    let optionsStatus = forms_text.status_options.map(function(item){
+        return <option value={item.id}>{item.name}</option>;
+    });
+
     return (
-        <>
-            <form action="" className={classes.form_container}>
+            <form action="">
+                <div className={classes.form_container}>
                 <div className={classes.form}>
                     <div className={classes.formLeft}>
-                    <label htmlFor="ID">Наименование продукта</label>
-                    <select id="ID" class='control' value={ID} onChange={(event) => setID(event.target.value)}>
-                        <option value="Osago">Осаго</option>
-                        <option value="Kasko">Каско</option>
-                        <option value="insurance">Страххх</option>
+                    <label htmlFor="ID">{forms_text.id}</label>
+                    <select required id="ID" class='control' value={ID} onChange={(event) => setID(event.target.value)}>
+                        {optionsId}
                     </select>
 
-                    <label htmlFor="Premium">Страховая премия</label>
-                    <input 
+                    <label htmlFor="Premium">{forms_text.premium}</label>
+                    <input required
                         type="number" min = "0"
                         className="control" 
                         id="Premium" value={premium} 
@@ -79,55 +86,54 @@ export default function Form(){
                     />
                     {insSum}
 
-                    <label htmlFor="insuredPersonId">ИНН застрахованного лица</label>
-                    <input 
+                    <label htmlFor="insuredPersonId">{forms_text.insuredPersonId}</label>
+                    <input required
                         type="text" 
                         className="control" 
                         id="insuredPersonId" value={insuredPersonId}
                         style={{
-                            border: hasErrorInsuredPerson ? '1px solid red' : null,
+                            borderBottom: hasErrorInsuredPerson ? '4px solid red' : null,
                         }}
                         onChange={handleinsuredPersonIdChange} 
                     />
 
-                    <label htmlFor="OwnerId">ИНН собственника</label>
-                    <input 
+                    <label htmlFor="OwnerId">{forms_text.ownerId}</label>
+                    <input required
                         type="text" 
                         className="control" 
                         id="OwnerId" value={ownerId}
                         style={{
-                            border: hasErrorOwner ? '1px solid red' : null,
+                            borderBottom: hasErrorOwner ? '4px solid red' : null,
                         }}
                         onChange={handleOwnerIdChange} 
                     />
                     </div>
 
                     <div className={classes.formRight}>
-                    <label htmlFor="dateBegin">Дата начала страховой ответсвенности</label>
-                    <input 
+                    <label htmlFor="dateBegin">{forms_text.dateBegin}</label>
+                    <input required
                         type="date" 
                         className="control" 
                         id="dateBegin" value={dateBegin} 
                         onChange={(event) => setDateBegin(event.target.value)} 
                     />
 
-                    <label htmlFor="dateEnd">Дата окончания страховой ответсвенности</label>
-                    <input 
+                    <label htmlFor="dateEnd">{forms_text.dateEnd}</label>
+                    <input required
                         type="date" 
                         className="control" 
                         id="dateEnd" value={dateEnd} 
                         onChange={(event) => setDateEnd(event.target.value)} 
                     />
 
-                    <label htmlFor="status">Статус договора</label>
-                    <select id="status" class='control' value={status} onChange={(event) => setStatus(event.target.value)}>
-                        <option value="draft">Проект</option>
-                        <option value="signed">Подписан</option>
+                    <label htmlFor="status">{forms_text.status}</label>
+                    <select required id="status" class='control' value={status} onChange={(event) => setStatus(event.target.value)}>
+                        {optionsStatus}
                     </select>
                     </div>
                 </div>
-            </form>
-            <Button>Офоромить договор</Button>                    
-        </>
+                </div>
+                <Button {...(hasErrorInsuredPerson || hasErrorOwner) ? disabeled : null}>{forms_text.button}</Button> 
+            </form>   
     );
 }
