@@ -16,9 +16,6 @@
     position: relative;
 }
 
-.top:hover{
-    height: 140px;
-}
 
 .logo{
     position: absolute;
@@ -45,5 +42,93 @@
           box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
     position: sticky;
     left: 0;
+    top: 0;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+@media screen and (max-width: 1400px){
+    .options .a_text {
+        display: none;
+    }
+    .options .icon {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        height: 23px;
+    }
+    .options {
+        justify-content: left;
+    }
+}
+
+.a, .home {
+    font-size: 20px;
+    text-decoration: none;
+    color:#F8F1F1;
+    vertical-align: middle;
+    background: #db6400;
+    text-transform: uppercase;
+    transition: 0.4s ease-in-out;
+}
+
+.home{
+    position: relative;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.home:hover {
+    background: #FFA62B;
+}
+
+.a {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 30px;
+}
+
+.a:hover{
+    padding-top: 70px;
+    background: #FFA62B;
+}
+
+.icon{
+    justify-content: center;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s opacity, 0.4s visibility;
+    transition: 0.4s ease-in-out;
+    height: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home_icon{
+    position: relative;
+    height: 23px;
+    margin-right: 7px;
+    margin-bottom: 3px;
+    vertical-align: middle;
+}
+
+.a:hover .icon{
+    opacity: 1;
+    visibility: visible;
+    height: 23px;
+    margin-bottom: 10px;
+}
+
+
+.home_outer{
+    margin: 30px;
+    position: fixed;
+    right: 0;
     top: 0;
 }
