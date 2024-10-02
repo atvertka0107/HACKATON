@@ -1,4 +1,5 @@
 import classes from "./Form.module.css"
+import Button from "../Button/Button";
 import { useState } from 'react';
 
 export default function Form(){
@@ -58,8 +59,7 @@ export default function Form(){
     }
 
     return (
-        <section className={classes.formSection}>
-            <h1>Оформление договора</h1>
+        <>
             <form action="" className={classes.form_container}>
                 <div className={classes.form}>
                     <div className={classes.formLeft}>
@@ -127,6 +127,7 @@ export default function Form(){
                     </div>
                 </div>
             </form>
-        </section>
+            <Button>Офоромить договор</Button>                    
+        </>
     );
 }

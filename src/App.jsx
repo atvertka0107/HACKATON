@@ -5,6 +5,7 @@ import './App.css'
 import Button from './components/Button/Button'
 import Form from './components/Form/Form'
 import Header from './components/Header/Header'
+import MainContainer from './components/MainContainer/MainContainer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +14,9 @@ function App() {
     <>
       <div>
         <Header />
-        <Form />
+        <MainContainer text='Оформление договора'>
+          <Form />
+        </MainContainer>
       </div>
     </>
   )
