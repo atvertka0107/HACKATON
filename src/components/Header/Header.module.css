@@ -1,0 +1,49 @@
+.top{
+    position: absolute;
+    background: #db6400;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+    z-index: 2;
+    height: 90px;
+    transition: 0.4s ease-in-out;
+}
+.bottom{
+    height: 140px;
+    background-color: #F8F1F1;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: relative;
+}
+
+.top:hover{
+    height: 140px;
+}
+
+.logo{
+    position: absolute;
+    bottom: 2px;
+}
+
+.inner {
+    width: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+    background-color: #F8F1F1;
+}
+
+.header {
+    z-index: 100;
+    -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    left: 0;
+    top: 0;
+}

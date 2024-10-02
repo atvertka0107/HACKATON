@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;700&family=Titillium+Web&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0; 
+    box-sizing: border-box; 
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    color: #292929;
+    margin-bottom: 50px;
+}
+
+label {
+    color: #3b3b3b;
+    margin-top: 20px;
+}
