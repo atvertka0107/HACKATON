@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import {createRoot} from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 import './main.css'
 import HelloPage from './pages/HelloPage'
 import ContractHistoryPage from './pages/ContractHistoryPage'
@@ -8,7 +8,7 @@ import InsuaranceProductsPage from './pages/InsuranceProductsPage'
 import ViewContractPage from './pages/ViewContractPage'
 import ErrorPage from './pages/ErrorPage'
 
-import { createBrowserRouter, RouterProvider, BrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
   {
