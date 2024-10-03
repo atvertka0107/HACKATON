@@ -1,4 +1,4 @@
-import classes from './ReportData.module.css'
+import classes from './AdminReportData.module.css'
 import {Link} from 'react-router-dom'
 
 export default function ReportData(){

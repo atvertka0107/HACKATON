@@ -1,7 +1,7 @@
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import MainContainer from "../components/MainContainer/MainContainer";
-import ReportData from "../components/ReportData/ReportData";
+import ReportData from "../components/AdminReportData/AdminReportData";
 import { admin_header_text } from "../data";
 
 export default function ReportDataPage(){

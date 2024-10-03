@@ -79,5 +79,5 @@ export const agent_header_text = [
 ]
 
 export const admin_header_text = [
-    ["/admin", 'Начальная страница', '']
+    ["/admin", 'Начальная страница', '../src/refs/Admin panel settings.svg']
 ]

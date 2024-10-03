@@ -29,8 +29,8 @@ export default function Header({type}){
                     <div className={classes.options}>
                         {links}
                     </div>
-                    <div className={classes.home_outer}><Link to="/" onMouseLeave={handleCursorOut} className={leave ? `${classes.home} ${classes.accept}` : classes.none}><img src="./src\refs\Exit to app.svg" className={classes.home_icon} />{leaveTxt}</Link></div>
-                    <div className={classes.home_outer}><a className={leave ? `${classes.home} ${classes.none}` : classes.home} onClick={handleLeave}><img src="./src\refs\Exit to app.svg" className={classes.home_icon} />{leaveTxt}</a></div>
+                    <div className={classes.home_outer}><Link to="/" onMouseLeave={handleCursorOut} className={leave ? `${classes.home} ${classes.accept}` : classes.none}><img src="../src\refs\Exit to app.svg" className={classes.home_icon} />{leaveTxt}</Link></div>
+                    <div className={classes.home_outer}><a className={leave ? `${classes.home} ${classes.none}` : classes.home} onClick={handleLeave}><img src="../src\refs\Exit to app.svg" className={classes.home_icon} />{leaveTxt}</a></div>
                 </div>
                 <div className={classes.bottom}>
                 <img src="https://api.soglasie.ru/storage/media/conversions/68319/d67a11b0-a408-4853-857f-a2cb6e2395e3-opti.png" alt="Страховая компания Согласие" className={classes.logo} />
