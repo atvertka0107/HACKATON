@@ -1,0 +1,20 @@
+.container {
+    position: relative;
+    height: 700px;
+    background: #88E7E7;
+    text-align: center;
+}
+
+.text {
+    position: absolute;
+    top: 20%;
+    left: 45%;
+}
+
+.text p {
+    font-weight: lighter;
+}
+
+.text h1 {
+    font-weight: bold;
+}
