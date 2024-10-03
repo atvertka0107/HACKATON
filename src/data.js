@@ -13,11 +13,17 @@ export const forms_text = {
         {id: '13', name: 'cacasco'},
         {id: '14', name: 'pipi'},
     ],
-    status_options: [
+    status_create_options: [
         {id: 'draft', name: 'Проект'},
         {id: 'signed', name: 'Подписан'},
     ],
-    button: 'Оформить договор',
+    status_edit_options: [
+        {id: 'draft', name: 'Проект'},
+        {id: 'signed', name: 'Подписан'},
+        {id: 'terminated', name: 'Расторгнут'},
+    ],
+    button_create: 'Оформить договор',
+    button_edit: 'Подтвердить',
 }
 
 export const contract_card_text = {
@@ -31,6 +37,7 @@ export const contract_card_text = {
 export const contracts = [
     {insuredPersonId: '1232144124', DateCreate: '12.04.2023', Name: 'zalupa', Status: 'draft'},
     {insuredPersonId: '2344324344', DateCreate: '11.04.2024', Name: 'xui', Status: 'signed'},
+    {insuredPersonId: '1232323323', DateCreate: '11.04.2014', Name: 'pipi', Status: 'terminated'},
     {insuredPersonId: '1232323323', DateCreate: '11.04.2014', Name: 'pipi', Status: 'terminated'},
 ]
 
@@ -52,3 +59,8 @@ export const products = [
     {ID: '16', Name: 'Авария', LOBId: 'ACCIDENT'},
     {ID: '17', Name: 'Каршеринговая тех фирма', LOBId: 'THI'},
 ]
+
+export const main_text = {
+    title: 'Проверка гипотез',
+    desctription: '23423rwefqergqergqeg',
+}

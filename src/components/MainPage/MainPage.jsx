@@ -1,17 +1,15 @@
-import './MainPage.module.css'
+import classes from './MainPage.module.css';
+import { main_text } from '../../data';
 
 export default function MainPage(){
     return (
-        <div class="container">
-        <div class="text_container">
-            <h1>Проверка гипотез</h1>
-            <p>{}</p>
-            <p>{}</p>
-            <p>{}</p>
-            <p>{}</p>
+        <div className={classes.container}>
+        <div className={classes.text_container}>
+            <h1 className={classes.h1}>{main_text.title}</h1>
+            <p className={classes.p}>{main_text.desctription}</p>
         </div>
-        <div class="image_container">
-            <img src="./images/white-offroader-jeep-parking.png" alt="car_logo" class="image" />
+        <div className={classes.image_container}>
+            <img src="./src\refs\white-offroader-jeep-parking.jpg" alt="car_logo" className={classes.image} />
         </div>
     </div>
     );

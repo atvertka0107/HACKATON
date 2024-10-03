@@ -1,23 +1,30 @@
-header {
-    background: orange;
-}
-.container {
-    position: relative;
-    height: 700px;
-    overflow: hidden;
+.h1 {
+    position: absolute;
+    left: 100px;
+    top: 100px;
 }
 
+.p{
+    position: absolute;
+    left: 110px;
+    top: 150px;
+}
+
+.container {
+    position: relative;
+    height: 570px;
+    overflow: hidden;
+}
 .text_container {
     justify-content: center;
     position: relative;
     display: inline-block;
     text-align: left;
-    background: linear-gradient(90deg, #FFFFFF 71.96%, rgba(255, 255, 255, 0.66) 85.98%, rgba(115, 115, 115, 0) 100%);
+    background: linear-gradient(90deg, #F8F1F1 71.96%, rgba(255, 255, 255, 0.66) 85.98%, rgba(115, 115, 115, 0) 100%);
     padding-bottom: 700px;
     padding-right: 50em;
     z-index: 1;
 }
-
 .image_container {
     margin: 0;
     display: inline-block;
@@ -25,11 +32,12 @@ header {
     right: 0;
     padding: 0;
     justify-content: end;
-}
-
-.image {
     width: auto;
+    height: 570px;
+}
+.image {
     height: 700px;
+    width: auto;
     object-fit: cover;
     padding: 0;
 }

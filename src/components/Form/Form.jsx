@@ -63,7 +63,7 @@ export default function Form(){
         return <option value={item.id}>{item.name}</option>;
     });
 
-    let optionsStatus = forms_text.status_options.map(function(item){
+    let optionsStatus = forms_text.status_create_options.map(function(item){
         return <option value={item.id}>{item.name}</option>;
     });
 
@@ -133,7 +133,7 @@ export default function Form(){
                     </div>
                 </div>
                 </div>
-                <Button {...(hasErrorInsuredPerson || hasErrorOwner) ? disabeled : null}>{forms_text.button}</Button> 
+                <Button disabled={hasErrorInsuredPerson || hasErrorOwner}>{forms_text.button_create}</Button> 
             </form>   
     );
 }
