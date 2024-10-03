@@ -4,6 +4,7 @@
     width: 100%;
     height: 100px;
     background: linear-gradient(180deg, #A8A8A8 0%, #8F8F8F 100%);
+    border-top: 10px solid #F8F1F1;
 }
 .footer .container, .name, .img {
     display: inline-block;
