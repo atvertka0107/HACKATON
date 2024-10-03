@@ -22,7 +22,7 @@
     text-align: left;
     background: linear-gradient(90deg, #F8F1F1 71.96%, rgba(255, 255, 255, 0.66) 85.98%, rgba(115, 115, 115, 0) 100%);
     padding-bottom: 700px;
-    padding-right: 50em;
+    padding-left: 100em;
     z-index: 1;
 }
 .image_container {
@@ -33,10 +33,10 @@
     padding: 0;
     justify-content: end;
     width: auto;
-    height: 570px;
+    height: 500px;
 }
 .image {
-    height: 700px;
+    height: 570px;
     width: auto;
     object-fit: cover;
     padding: 0;
