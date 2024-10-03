@@ -39,6 +39,10 @@ export const contracts = [
     {insuredPersonId: '2344324344', DateCreate: '11.04.2024', Name: 'xui', Status: 'signed'},
     {insuredPersonId: '1232323323', DateCreate: '11.04.2014', Name: 'pipi', Status: 'terminated'},
     {insuredPersonId: '1232323323', DateCreate: '11.04.2014', Name: 'pipi', Status: 'terminated'},
+    {insuredPersonId: '1232144124', DateCreate: '12.04.2023', Name: 'zalupa', Status: 'draft'},
+    {insuredPersonId: '2344324344', DateCreate: '11.04.2024', Name: 'xui', Status: 'signed'},
+    {insuredPersonId: '1232323323', DateCreate: '11.04.2014', Name: 'pipi', Status: 'terminated'},
+    {insuredPersonId: '1232323323', DateCreate: '11.04.2014', Name: 'pipi', Status: 'terminated'},
 ]
 
 export const contracts_full = {
@@ -58,9 +62,22 @@ export const products = [
     {ID: '15', Name: 'Тур', LOBId: 'THI'},
     {ID: '16', Name: 'Авария', LOBId: 'ACCIDENT'},
     {ID: '17', Name: 'Каршеринговая тех фирма', LOBId: 'THI'},
+    {ID: '15', Name: 'Тур', LOBId: 'THI'},
+    {ID: '16', Name: 'Авария', LOBId: 'ACCIDENT'},
+    {ID: '17', Name: 'Каршеринговая тех фирма', LOBId: 'THI'},
 ]
 
 export const main_text = {
     title: 'Проверка гипотез',
     desctription: '23423rwefqergqergqeg',
 }
+
+export const agent_header_text = [
+    ["/sign_contract", 'Оформление договора', "./src/refs/Assignment add.svg"],
+    ["/history", 'История договоров', './src/refs/History.svg'],
+    ["/insuarance_products", 'Продукты страхования', './src/refs/Vector.svg'],
+]
+
+export const admin_header_text = [
+    ["/admin", 'Начальная страница', '../src/refs/Admin panel settings.svg']
+]

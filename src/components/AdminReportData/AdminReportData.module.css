@@ -1,12 +1,11 @@
-.button {
+.link{
     position: relative;
     border-radius: 40px;
-    width: 300px;
+    width: 650px;
     height: 50px;
     background: #db6400;
     font-weight: 600;
     font-size: 18px;
-    text-transform: uppercase;
     text-align: center;
     color: #fff;
     border: none;
@@ -20,17 +19,10 @@
     cursor: pointer;
     margin-top: 50px;
     margin-bottom: 70px;
+    text-decoration: none;
+    padding: 10px;
 }
 
-.button:hover{
+.link:hover{
     background: #FFA62B;
-}
-
-.button.active{
-    opacity: 0.7;
-}
-
-.button:disabled{
-    cursor: not-allowed;
-    background-color: rgb(79, 79, 79);
 }

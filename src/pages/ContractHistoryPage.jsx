@@ -19,7 +19,7 @@ export default function ContractHistoryPage(){
 
     return(
         <>
-            <Header />
+            <Header type={agent_header_text} />
             <MainContainer text='История договоров'>
                 <ContractHistory contracts={contracts}/>
             </MainContainer>
