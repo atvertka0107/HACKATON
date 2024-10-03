@@ -97,3 +97,7 @@
 .cardStatus.terminated{
     background: linear-gradient(270deg, #cf2929 0%, #901b1b 100%);
 }
+
+.a{
+    text-decoration: none;
+}

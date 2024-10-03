@@ -13,10 +13,10 @@ function App() {
     <>
       <div>
         {/* <HelloPage /> */}
-        {/* <ContractHistoryPage /> */}
+        <ContractHistoryPage />
         {/* <ContractSignPage /> */}
         {/* <InsuranceProductsPage /> */}
-        <ViewContractPage />
+        {/* <ViewContractPage /> */}
       </div>
     </>
   )

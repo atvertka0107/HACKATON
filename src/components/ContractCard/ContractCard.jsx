@@ -4,6 +4,7 @@ import classes from './ContractCard.module.css'
 export default function ContractCard({information}){
 
     return(
+        <a href="" className={classes.a}>
         <div className={classes.contractCard}>
             <div className={classes.mainBlock}>
             <h2>{contract_card_text.contract} <img src="./src\refs\Contract.svg" className={classes.icon}/></h2> 
@@ -26,5 +27,6 @@ export default function ContractCard({information}){
                 <span className={classes.statusText}>{contract_card_text.Status[information.Status]}</span>
             </div>
         </div>
+        </a>
     );
 }
