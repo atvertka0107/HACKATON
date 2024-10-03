@@ -84,6 +84,14 @@
     border-radius: 30px;
 }
 
+.home.accept, .home.accept:hover{
+    background-color: rgb(168, 2, 2);
+}
+
+.home.none{
+    display: none;
+}
+
 .home:hover {
     background: #FFA62B;
 }

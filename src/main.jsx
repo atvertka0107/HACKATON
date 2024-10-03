@@ -9,6 +9,8 @@ import ViewContractPage from './pages/ViewContractPage'
 import ErrorPage from './pages/ErrorPage'
 
 import { createBrowserRouter, RouterProvider, BrowserRouter } from 'react-router-dom'
+import AdminStartPage from './pages/AdminStartPage'
+import ReportDataPage from './pages/ReportDataPage'
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
   {
     path: '/view_contract',
     element: <ViewContractPage />
+  },
+  {
+    path: '/admin',
+    element: <AdminStartPage />
+  },
+  {
+    path: '/admin/report_data',
+    element: <ReportDataPage />
   },
 ]);
 
