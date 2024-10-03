@@ -4,14 +4,14 @@ const apiEndpoint = 'http://localhost:8084/agent'
 
 const api = {
     getContracts: async () => {
-        const responss = await axios.get(`${apiEndpoint}/contracts`);
+        const response = await axios.get(`${apiEndpoint}/contracts`);
         return response.data;
     },
-    getContractById: async (ContractId) => {
+    getContractById: async (contractId) => {
         const response = await axios.get(`${apiEndpoint}/contracts/${contractId}`);
         return response.data;
     },
-    createContract: async (ContractData) => {
+    createContract: async (contractData) => {
         const response = await axios.post(`${apiEndpoint}/createContract`, contractData);
         return response.data;
     },
