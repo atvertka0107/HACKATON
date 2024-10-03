@@ -55,9 +55,9 @@ export const products_text = {
 export const products = [
     {ID: '13', Name: 'Каршеринг', LOBId: 'CASCO'},
     {ID: '14', Name: 'Перевозка', LOBId: 'OSAGO'},
-    {ID: '15', Name: 'Тур', LOBId: 'THI'},
-    {ID: '16', Name: 'Авария', LOBId: 'ACCIDENT'},
-    {ID: '17', Name: 'Каршеринговая тех фирма', LOBId: 'THI'},
+    // {ID: '15', Name: 'Тур', LOBId: 'THI'},
+    // {ID: '16', Name: 'Авария', LOBId: 'ACCIDENT'},
+    // {ID: '17', Name: 'Каршеринговая тех фирма', LOBId: 'THI'},
 ]
 
 export const main_text = {
