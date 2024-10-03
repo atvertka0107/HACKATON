@@ -12,8 +12,8 @@ function App() {
   return (
     <>
       <div>
-        {/* <HelloPage /> */}
-        <ContractHistoryPage />
+        <HelloPage />
+        {/* <ContractHistoryPage /> */}
         {/* <ContractSignPage /> */}
         {/* <InsuranceProductsPage /> */}
         {/* <ViewContractPage /> */}

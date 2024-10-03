@@ -12,18 +12,20 @@
 
 .container {
     position: relative;
-    height: 570px;
+    height: 100%;
     overflow: hidden;
+    margin: 0;
 }
 .text_container {
     justify-content: center;
     position: relative;
     display: inline-block;
     text-align: left;
-    background: linear-gradient(90deg, #F8F1F1 71.96%, rgba(255, 255, 255, 0.66) 85.98%, rgba(115, 115, 115, 0) 100%);
-    padding-bottom: 700px;
-    padding-right: 50em;
+    background: linear-gradient(90deg, #F8F1F1 78.96%, rgba(255, 255, 255, 0.66) 85.98%, rgba(115, 115, 115, 0) 100%);
+    padding-bottom: 800px;
+    padding-right: 50%;
     z-index: 1;
+    margin: 0;
 }
 .image_container {
     margin: 0;
@@ -33,11 +35,14 @@
     padding: 0;
     justify-content: end;
     width: auto;
-    height: 570px;
+    min-height: 100%;
 }
 .image {
-    height: 700px;
+    position: absolute;
+    height: 100%;
+    right: 0;
     width: auto;
     object-fit: cover;
     padding: 0;
+    margin: 0;
 }
