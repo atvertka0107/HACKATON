@@ -11,6 +11,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import AdminStartPage from './pages/AdminStartPage'
 import AdminReportDataPage from './pages/AdminReportDataPage'
 import AdminInsuranceProductsPage from './pages/AdminInsuranceProductsPage'
+import AdminViewConractConversionPage from './pages/AdminViewConractConversionPage'
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path: '/admin/insurance_products',
     element: <AdminInsuranceProductsPage />
+  },
+  {
+    path: '/admin/view_contract_conversion',
+    element: <AdminViewConractConversionPage />
   },
 ]);
 

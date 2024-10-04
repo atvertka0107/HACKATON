@@ -64,3 +64,39 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.change, .delete {
+    position: absolute;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffff;
+    transition: 0.2s ease-in-out;
+}
+
+.change {
+    right: 10%;
+    top: 17px;
+    background-color: #db6400;
+}
+
+.change:hover {
+    background: #f48429;
+}
+
+.delete{
+    right: -10px;
+    top: 17px;
+    background-color: rgb(187, 2, 2);
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.delete:hover{
+    background: rgb(227, 14, 14);
+}
+
+.delete.none{
+    display: none;
+}
