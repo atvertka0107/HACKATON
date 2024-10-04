@@ -8,7 +8,7 @@ export default function AdminPremiumComissionPage(){
     return (
         <>
             <Header type={admin_header_text} />
-            <MainContainer text='Подитоги по премии и комиссии в разрезе страхового продукта'>
+            <MainContainer text='Подытоги по премии и комиссии в разрезе страхового продукта'>
                 <AdminPremiumCommission />
             </MainContainer>
             <Footer />

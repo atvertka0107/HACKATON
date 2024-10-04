@@ -1,13 +1,26 @@
-import { useState } from "react";
-import { products_text } from "../../data";
+import { useState, useEffect } from "react";
 import Button from "../Button/Button";
 import classes from './AdminCreateProduct.module.css';
-import { adminCreateForm } from '../../data';
+import { LOBrequest } from '../../data';
 
 export default function AdminCreateProduct (){
     const [ID, setID] = useState();
     const [ProductName, setProductName] = useState();
     const [isEmptyProductName, setIsEmptyProductName] = useState(false);
+
+    const [loading, setLoading] = useState(false);
+    const [LOBIds, setLOBIds] = useState([])
+
+    useEffect(() => {
+        const getProds = async () => {
+            setLoading(true)
+            const res = LOBrequest;
+            setLOBIds(res);
+            setLoading(false)
+        }
+        
+        getProds();
+    }, [])
 
      const handleProductNameChange = (event) => {
         setProductName(event.target.value);
@@ -15,8 +28,11 @@ export default function AdminCreateProduct (){
     };
 
 
-    let optionsId = adminCreateForm.LOB_text.map(function(item){
-        return <option value={item.id}>{item.value}</option>;
+    let optionsId = LOBIds.map(function(item){
+        if(loading){
+            return <h2>Loading...</h2>
+        }
+        return <option value={item.Id}>{item.Name}</option>;
     });
 
     return (
@@ -24,14 +40,14 @@ export default function AdminCreateProduct (){
             <div className={classes.form_container}>
                 <div className={classes.form}>
                     <div className={classes.formLeft}>
-                        <label htmlFor="ID">{products_text.lob}</label>
+                        <label htmlFor="ID">Линия бизнеса</label>
                         <select required id="ID" className='control' value={ID} onChange={(event) => setID(event.target.value)}>
                             {optionsId}
                         </select>
                     </div>
 
                     <div className={classes.formRight}>
-                        <label htmlFor="ProductName">{adminCreateForm.form_name_product}</label>
+                        <label htmlFor="ProductName">Введите название продукта</label>
                         <input 
                             required
                             type="text" 
@@ -46,7 +62,7 @@ export default function AdminCreateProduct (){
                     </div>
                 </div>
             </div>
-            <Button disabled={isEmptyProductName}>{adminCreateForm.button_create}</Button>
+            <Button disabled={isEmptyProductName}>Создать</Button>
         </form>
     );
 }
