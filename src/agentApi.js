@@ -7,36 +7,71 @@ const api = {
         try{
             const response = await axios.get(`${apiEndpoint}/contracts`);
             return response.data;
-        }
-                                                                  
+        }                                                  
         catch (error) {
             console.error('Ошибка при получении данных:', error);
         }
         throw error;
     },
-    getContractById: async (contractId) => {                                                                                                                 
-        const response = await axios.get(`${apiEndpoint}/contracts/${contractId}`);
-        return response.data;
+    getContractById: async (contractId) => {    
+        try {
+            const response = await axios.get(`${apiEndpoint}/contracts/${contractId}`);
+            return response.data;
+        }  
+        catch (error) {
+            console.log('Ошибка приполучении ContractID');
+        }                                                                                                          
+        throw error;
     },
     createContract: async (contractData) => {
-        const response = await axios.post(`${apiEndpoint}/createContract`, contractData);
-        return response.data;
+        try{
+            const response = await axios.post(`${apiEndpoint}/createContract`, contractData);
+            return response.data;
+        }
+        catch(error){
+            console.log(error);
+        }
+        throw(error);
     },
     acceptContract: async (contractId) => {
-        const response = await axios.post(`${apiEndpoint}/contracts/accept/${contractId}`);
-        return response.data;
+        try {
+            const response = await axios.post(`${apiEndpoint}/contracts/accept/${contractId}`);
+            return response.data;
+        }
+        catch(error){
+            console.log(error);
+        }
+       throw(error);
     },
     deleteContract: async (contractId) => {
-        const response = await axios.post(`${apiEndpoint}/contracts/delete/${contractId}`);
-        return response.data;
+        try {
+            const response = await axios.post(`${apiEndpoint}/contracts/delete/${contractId}`);
+            return response.data;
+        }
+        catch (error){
+            console.log(error);
+        }
+        throw(error);
     },
     terminateContract: async (contractId) => {
-        const response = await axios.post(`${apiEndpoint}/contracts/terminate/${contractId}`);
-        return response.data;
+        try {
+            const response = await axios.post(`${apiEndpoint}/contracts/terminate/${contractId}`);
+            return response.data;
+        }
+        catch(error){
+            console.log(error);
+        }
+        throw(error);
     },
     getProductList: async () => {
-        const response = await axios.get(`${apiEndpoint}/product/list`);
-        return response.data;
+        try{    
+            const response = await axios.get(`${apiEndpoint}/product/list`);
+            return response.data;
+        }
+        catch(error){
+            console.log(error)
+        }
+        throw(error);
     }
 };
 
