@@ -1,33 +1,44 @@
 import { Link } from "react-router-dom";
-import { products, products_text } from "../../data"
+import { LOBId, products_request } from "../../data"
 import classes from './AdminInsuranceProducts.module.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function AdminInsuranceProducts(){
-    return products.map(function(item){
-        const [deleteTxt, setDeleteTxt] = useState('Удалить');
+    const [loading, setLoading] = useState(false);
+    const [prods, setProds] = useState([]);
+
+    useEffect(() => {
+        const getProds = async () => {
+            setLoading(true)
+            const res = products_request;
+            setProds(res);
+            setLoading(false)
+        }
+        
+        getProds();
+    }, [])
+
     const [deleteConf, setDeleteConf] = useState(false);
 
-    function handleCursorOut(event){
-        setDeleteConf(false);
-        setDeleteTxt('Удалить');
-    }
-
-    function handleDelete(event){
-        setDeleteConf(true);
-        setDeleteTxt('Подтвердить?');
+    function handleDelete(id){
+        console.log(id);
     } 
+
+    let ret = prods.map(function(item){
+        if(loading){
+            return <h2>Loading...</h2>
+        }
         return (
             <div className={classes.product}>
                 <div className={classes.mainBlock}>
                     <h2 className={classes.h2}>{item.Name}</h2>
-                    <span className={classes.line}>{products_text.lob} <img src="../src/refs/Arrow forward.svg" className={classes.arrow} /> <span className={classes.id}>{products_text.ids[item.LOBId]}</span></span>
+                    <span className={classes.line}>Линия бизнеса<img src="../src/refs/Arrow forward.svg" className={classes.arrow} /> <span className={classes.id}>{LOBId[item.LOBId]}</span></span>
                     <span className={classes.line1}>ID <img src="../src/refs/Arrow forward.svg" className={classes.arrow} /> <span className={classes.id}>{item.ID}</span> </span>
                 </div>
                 <Link to='/admin/change_product' className={classes.change}>Изменить</Link>
-                <Link onMouseLeave={handleCursorOut} className={deleteConf ? classes.delete : `${classes.delete} ${classes.none}`}>Подтвердить?</Link>
-                <a onClick={handleDelete} className={deleteConf ? `${classes.delete} ${classes.none}` : classes.delete}>Удалить</a>
+                <Link onClick={() => handleDelete(item.ID)} className={classes.delete}>Удалить</Link>
             </div>
         );
     });
+    return ret;
 }

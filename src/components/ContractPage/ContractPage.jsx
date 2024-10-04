@@ -1,50 +1,76 @@
 import classes from './ContractPage.module.css'
-import { forms_text } from "../../data";
+import { Status } from "../../data";
 import { contracts_full } from '../../data';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from '../Button/Button';
 
 export default function ContractPage({ID}){
-    const contract = contracts_full[ID];
+    const [contract, setContract] = useEffect();
     const [status, setStatus] = useState(contract.Status);
-    let optionsStatus = forms_text.status_edit_options.map(function(item){
-        return <option value={item.id}>{item.name}</option>;
-    });
+    const [loading, setLoading] = useState(false);
 
+    useEffect(() => {
+        const getProds = async () => {
+            setLoading(true)
+            const res = contracts_full[ID];
+            setContract(res);
+            setLoading(false)
+        }
+        
+        getProds();
+    }, [])
+
+    useEffect(() => {
+        const getProds = async () => {
+            setLoading(true)
+            const res = Status;
+            setStatus(res);
+            setLoading(false)
+        }
+        
+        getProds();
+    }, [])
+
+    let optionsStatus = Status.map(function(item){
+        return <option value={item.Id}>{item.Name}</option>;
+    });
+    if(loading){
+        return <h2>Loading...</h2>
+    }
     return(
         <div className={classes.pageContainer}>
             <div className={classes.section}>
-                <span className={classes.lbl}>{forms_text.id}</span>
+                <span className={classes.lbl}>Наименование продукта</span>
                 <span className={classes.field}>{contract.Name}</span>
 
-                <span className={classes.lbl}>{forms_text.premium}</span>
+                <span className={classes.lbl}>Страховая премия</span>
                 <span className={classes.field}>{contract.Premium}</span>
 
-                <span className={classes.lbl}>{forms_text.insuredPersonId}</span>
+                <span className={classes.lbl}>ИНН застрахованного лица</span>
                 <span className={classes.field}>{contract.insuredPersonId}</span>
 
-                <span className={classes.lbl}>{forms_text.ownerId}</span>
+                <span className={classes.lbl}>ИНН собственника</span>
                 <span className={classes.field}>{contract.OwnerId}</span>
             </div>
             <div className={classes.section}>
-                <span className={classes.lbl}>{forms_text.dateBegin}</span>
+                <span className={classes.lbl}>Дата начала страховой ответсвенности</span>
                 <span className={classes.field}>{contract.DateBegin}</span>
 
-                <span className={classes.lbl}>{forms_text.dateEnd}</span>
+                <span className={classes.lbl}>Дата окончания страховой ответсвенности</span>
                 <span className={classes.field}>{contract.DateEnd}</span>
 
-                <span className={classes.lbl}>{forms_text.dateCreate}</span>
+                <span className={classes.lbl}>Дата создания договора</span>
                 <span className={classes.field}>{contract.DateCreate}</span>
 
-                <span className={classes.lbl}>{forms_text.dateSign}</span>
+                <span className={classes.lbl}>Дата подписания договора</span>
                 <span className={classes.field}>{contract.DateSign}</span>
 
-                <span className={classes.lbl}>{forms_text.status}</span>
+                <span className={classes.lbl}>Статус договора</span>
                 <form>
                 <select required id="status" class='control' value={status} onChange={(event) => setStatus(event.target.value)}>
                         {optionsStatus}
                     </select>
-                <Button>{forms_text.button_edit}</Button>
+                <Button>Изменить</Button>
                 </form>    
             </div>
         </div>

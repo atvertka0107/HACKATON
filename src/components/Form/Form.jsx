@@ -1,7 +1,7 @@
 import classes from "./Form.module.css"
 import Button from "../Button/Button";
-import { useState } from 'react';
-import { forms_text } from "../../data";
+import { useState, useEffect } from 'react';
+import { id_options, StatusRequest } from "../../data";
 
 export default function Form(){
     const [ID, setID] = useState();
@@ -15,6 +15,33 @@ export default function Form(){
     const [hasErrorOwner, setHasErrorOwner] = useState(false);
     const [hasErrorInsuredPerson, setHasErrorInsuredPerson] = useState(false);
     const [insSum, setInsSum] = useState();
+
+    const [statusList, setStatusList] = useState([]);
+
+    const [loading, setLoading] = useState(false);
+    const [products, setProducts] = useState([])
+
+    useEffect(() => {
+        const getProds = async () => {
+            setLoading(true)
+            const res = id_options;
+            setProducts(res);
+            setLoading(false)
+        }
+        
+        getProds();
+    }, [])
+
+    useEffect(() => {
+        const getProds = async () => {
+            setLoading(true)
+            const res = StatusRequest;
+            setStatusList(res);
+            setLoading(false)
+        }
+        
+        getProds();
+    }, [])
     
     function isValidInn(i) {
         if ( i.match(/\D/) ) return false;
@@ -59,11 +86,17 @@ export default function Form(){
         setInsSum(event.target.value.trim() ? <div className={classes.subtxt}>Страховая сумма: <span className={classes.sum}>{0.9*event.target.value}</span></div> : '')
     }
 
-    let optionsId = forms_text.id_options.map(function(item){
+    let optionsId = products.map(function(item){
+        if(loading){
+            return <h2>Loading...</h2>
+        }
         return <option value={item.id}>{item.name}</option>;
     });
 
-    let optionsStatus = forms_text.status_create_options.map(function(item){
+    let optionsStatus = statusList.map(function(item){
+        if(loading){
+            return <h2>Loading...</h2>
+        }
         return <option value={item.id}>{item.name}</option>;
     });
 
@@ -72,12 +105,12 @@ export default function Form(){
                 <div className={classes.form_container}>
                 <div className={classes.form}>
                     <div className={classes.formLeft}>
-                    <label htmlFor="ID">{forms_text.id}</label>
+                    <label htmlFor="ID">Наименование продукта</label>
                     <select required id="ID" class='control' value={ID} onChange={(event) => setID(event.target.value)}>
                         {optionsId}
                     </select>
 
-                    <label htmlFor="Premium">{forms_text.premium}</label>
+                    <label htmlFor="Premium">Страховая премия</label>
                     <input required
                         type="number" min = "0"
                         className="control" 
@@ -86,7 +119,7 @@ export default function Form(){
                     />
                     {insSum}
 
-                    <label htmlFor="insuredPersonId">{forms_text.insuredPersonId}</label>
+                    <label htmlFor="insuredPersonId">ИНН застрахованного лица</label>
                     <input required
                         type="text" 
                         className="control" 
@@ -97,7 +130,7 @@ export default function Form(){
                         onChange={handleinsuredPersonIdChange} 
                     />
 
-                    <label htmlFor="OwnerId">{forms_text.ownerId}</label>
+                    <label htmlFor="OwnerId">ИНН собственника</label>
                     <input required
                         type="text" 
                         className="control" 
@@ -110,7 +143,7 @@ export default function Form(){
                     </div>
 
                     <div className={classes.formRight}>
-                    <label htmlFor="dateBegin">{forms_text.dateBegin}</label>
+                    <label htmlFor="dateBegin">Дата начала страховой ответсвенности</label>
                     <input required
                         type="date" 
                         className="control" 
@@ -118,7 +151,7 @@ export default function Form(){
                         onChange={(event) => setDateBegin(event.target.value)} 
                     />
 
-                    <label htmlFor="dateEnd">{forms_text.dateEnd}</label>
+                    <label htmlFor="dateEnd">Дата окончания страховой ответсвенности</label>
                     <input required
                         type="date" 
                         className="control" 
@@ -126,14 +159,14 @@ export default function Form(){
                         onChange={(event) => setDateEnd(event.target.value)} 
                     />
 
-                    <label htmlFor="status">{forms_text.status}</label>
+                    <label htmlFor="status">Статус договора</label>
                     <select required id="status" class='control' value={status} onChange={(event) => setStatus(event.target.value)}>
                         {optionsStatus}
                     </select>
                     </div>
                 </div>
                 </div>
-                <Button disabled={hasErrorInsuredPerson || hasErrorOwner}>{forms_text.button_create}</Button> 
+                <Button disabled={hasErrorInsuredPerson || hasErrorOwner}>Создать</Button> 
             </form>   
     );
 }

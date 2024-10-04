@@ -1,4 +1,4 @@
-import { products_text } from '../../data';
+import { LOBId } from '../../data';
 import classes from './Product.module.css'
 
 export default function Product({info}){
@@ -9,7 +9,7 @@ export default function Product({info}){
             </div>
             <div className={classes.mainBlock}>
                 <h2 className={classes.h2}>{info.Name}</h2>
-                <span className={classes.line}>{products_text.lob} <img src="../src/refs/Arrow forward.svg" className={classes.arrow} /> <span className={classes.id}>{products_text.ids[info.LOBId]}</span></span>
+                <span className={classes.line}>Линия бизнеса <img src="../src/refs/Arrow forward.svg" className={classes.arrow} /> <span className={classes.id}>{LOBId[info.LOBId]}</span></span>
             </div>
         </div>
     );

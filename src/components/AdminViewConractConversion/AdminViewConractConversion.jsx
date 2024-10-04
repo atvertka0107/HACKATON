@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import classes from './AdminViewConractConversion.module.css'
-import { admin_conv_prod, contract_card_text } from '../../data';
+import { admin_conv_prod, Status } from '../../data';
 import Pagination from '../Pagination/Pagination';
 
 export default function AdminViewConractConversion(){
@@ -47,7 +47,7 @@ export default function AdminViewConractConversion(){
             <div className={classes.project}>
                 <span className={classes.prop}>{item.AgentId}</span>
                 <span className={classes.prop}>{item.ProductId}</span>
-                <span className={classes.prop}>{contract_card_text.Status[item.Status]}</span>
+                <span className={classes.prop}>{Status[item.Status]}</span>
                 <span className={classes.prop}>{item.Date}</span>
             </div>
         );

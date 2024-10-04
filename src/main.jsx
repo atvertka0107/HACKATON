@@ -16,6 +16,8 @@ import AdminChangeProductPage from './pages/AdminChangeProductPage'
 import AdminGeneralPremiumPage from './pages/AdminGeneralPremiumPage'
 import AdminPremiumComissionPage from './pages/AdminPremiumComissionPage'
 import AdminViewSalesDataPage from './pages/AdminViewSalesDataPage'
+import AdminListProduct from './pages/AdminListProduct'
+import AdminCreateProductPage from './pages/AdminCreateProductPage'
 
 const router = createBrowserRouter([
   {
@@ -66,6 +68,14 @@ const router = createBrowserRouter([
   {
     path: '/admin/view_sales_data',
     element: <AdminViewSalesDataPage/>
+  },
+  {
+    path: '/admin/products_list',
+    element: <AdminListProduct/>
+  },
+  {
+    path: '/admin/create_product',
+    element: <AdminCreateProductPage/>
   },
   {
     path: '/contract/:id',
