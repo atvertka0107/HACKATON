@@ -5,7 +5,6 @@ import { Routes, Route, Link} from 'react-router-dom'
 export default function Header({type}){
     const [leaveTxt, setLeaveTxt] = useState('Выйти');
     const [leave, setLeave] = useState(false);
-    const [cursor, setCursor] = useState();
 
     function handleCursorOut(event){
         setLeave(false);

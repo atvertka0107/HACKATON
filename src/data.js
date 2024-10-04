@@ -79,6 +79,27 @@ export const agent_header_text = [
 ]
 
 export const admin_header_text = [
+    ["/admin", 'Начальная страница', '../src/refs/Admin panel settings.svg']
+]
+
+export const admin_conv_prod = [
+    {AgentId: '123', ProductId: '345341', LOB: 'CASCO', Status: 'draft', Date: '12.06.2003'},
+    {AgentId: '213', ProductId: '2662623', LOB: 'CASCO', Status: 'terminated', Date: '12.06.2005'},
+    {AgentId: '312', ProductId: '123213', LOB: 'CASCO', Status: 'signed', Date: '12.06.2002'},
+    {AgentId: '123', ProductId: '345341', LOB: 'CASCO', Status: 'draft', Date: '12.06.2003'},
+    {AgentId: '213', ProductId: '2662623', LOB: 'CASCO', Status: 'terminated', Date: '12.06.2005'},
+    {AgentId: '312', ProductId: '123213', LOB: 'CASCO', Status: 'signed', Date: '12.06.2002'},
+    {AgentId: '123', ProductId: '345341', LOB: 'CASCO', Status: 'draft', Date: '12.06.2003'},
+    {AgentId: '213', ProductId: '2662623', LOB: 'CASCO', Status: 'terminated', Date: '12.06.2005'},
+    {AgentId: '312', ProductId: '123213', LOB: 'CASCO', Status: 'signed', Date: '12.06.2002'},
+    {AgentId: '123', ProductId: '345341', LOB: 'CASCO', Status: 'draft', Date: '12.06.2003'},
+    {AgentId: '213', ProductId: '2662623', LOB: 'CASCO', Status: 'terminated', Date: '12.06.2005'},
+    {AgentId: '312', ProductId: '123213', LOB: 'CASCO', Status: 'signed', Date: '12.06.2002'},
+    {AgentId: '123', ProductId: '345341', LOB: 'CASCO', Status: 'draft', Date: '12.06.2003'},
+    {AgentId: '213', ProductId: '2662623', LOB: 'CASCO', Status: 'terminated', Date: '12.06.2005'},
+    {AgentId: '312', ProductId: '123213', LOB: 'CASCO', Status: 'signed', Date: '12.06.2002'},
+    
+]
     ["/admin", 'Начальная страница', '../src/refs/Admin panel settings.svg'], 
     ["/admin/products_list", 'Продукты страхования', '../src/refs/Vector.svg'],
 ]
