@@ -1,0 +1,59 @@
+.forms {
+    display: flex;
+    border-bottom: 4px solid #bababa;
+    border-top: 4px solid #bababa;
+    border-radius: 20px;
+}
+.input{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+
+.flag{
+    position: relative;
+    background-color:rgb(135, 135, 135);
+    color: #fff;
+    min-width: 70px;
+    margin: 20px 0px;
+    padding: 10px;
+    box-sizing: border-box; 
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid #fff;
+    transition: 0.2s;
+    outline: none;
+    font-size: 14px;
+}
+
+.date {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.date:hover{
+    border-left: none;
+}
+
+.flag:hover{
+    background-color: #959595;
+}
+
+.project {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.prop{
+    display: flex;
+    width: 100%;
+}
