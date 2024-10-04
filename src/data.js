@@ -134,3 +134,15 @@ export const admin_prem_com = [
     {ProductId: '132531', SumPremium: '000', SumComission: '1244', AgentId: '1243'},
     {ProductId: '666', SumPremium: '1488', SumComission: '228', AgentId: '895494'},
 ]
+
+export const adminCreateForm = {
+    form_name_product: 'Введите название продукта',
+    LOB_text: [
+        {id: 'OSAGO', value: 'ОСАГО'}, 
+        {id: 'CASCO', value: 'КАСКО'},
+        {id: 'THI', value: 'Страхование путешественников'},
+        {id: 'ACCIDENT', value: 'Страхование от несчастных случаев'},
+    ],
+    button_create: 'Создать',
+    button_change: 'изменить',
+}
