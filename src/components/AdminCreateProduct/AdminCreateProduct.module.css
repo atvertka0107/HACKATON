@@ -1,0 +1,28 @@
+.form_container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 400px;
+}
+
+.form{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.formRight, .formLeft{
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    
+}
+
+.subtxt, .sum{
+    font-style: italic;
+    color: #929292;
+}
+
+.sum {
+    font-weight: 600;
+}

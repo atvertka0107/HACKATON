@@ -1,11 +1,10 @@
-import classes from './AdminChangeProduct.module.css'
 import { useState } from "react";
 import { products_text } from "../../data";
 import Button from "../Button/Button";
+import classes from './AdminCreateProduct.module.css';
 import { adminCreateForm } from '../../data';
 
-export default function AdminChangeProduct({id}){
-
+export default function AdminCreateProduct (){
     const [ID, setID] = useState();
     const [ProductName, setProductName] = useState();
     const [isEmptyProductName, setIsEmptyProductName] = useState(false);
@@ -15,11 +14,13 @@ export default function AdminChangeProduct({id}){
         setIsEmptyProductName(event.target.value.trim() === ''); // Обновляем state при изменении поля
     };
 
+
     let optionsId = adminCreateForm.LOB_text.map(function(item){
         return <option value={item.id}>{item.value}</option>;
     });
-    return(
-        <form action="">
+
+    return (
+       <form action="">
             <div className={classes.form_container}>
                 <div className={classes.form}>
                     <div className={classes.formLeft}>
@@ -45,7 +46,7 @@ export default function AdminChangeProduct({id}){
                     </div>
                 </div>
             </div>
-            <Button disabled={isEmptyProductName}>{adminCreateForm.button_change}</Button>
+            <Button disabled={isEmptyProductName}>{adminCreateForm.button_create}</Button>
         </form>
     );
 }
