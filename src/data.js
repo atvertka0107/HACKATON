@@ -102,13 +102,35 @@ export const admin_conv_prod = [
     
 ]
 
-export const adminCreateForm = {
-    form_name_product: 'Введите название продукта',
-    LOB_text: [
-        {id: 'OSAGO', value: 'ОСАГО'}, 
-        {id: 'CASCO', value: 'КАСКО'},
-        {id: 'THI', value: 'Страхование путешественников'},
-        {id: 'ACCIDENT', value: 'Страхование от несчастных случаев'},
-    ],
-    button_create: 'Создать',
-}
+export const admin_view_sales = [
+    {AgentId: '123', ProductId: '345341', ContractId: '1235562', Premium: '123', Comission: '587'},
+    {AgentId: '7896', ProductId: '074', ContractId: '01', Premium: '1', Comission: '562'},
+    {AgentId: '125', ProductId: '1346', ContractId: '21115', Premium: '19', Comission: '0'},
+    {AgentId: '123', ProductId: '345341', ContractId: '1235562', Premium: '123', Comission: '587'},
+    {AgentId: '7896', ProductId: '074', ContractId: '01', Premium: '1', Comission: '562'},
+    {AgentId: '125', ProductId: '1346', ContractId: '21115', Premium: '19', Comission: '0'},
+    {AgentId: '123', ProductId: '345341', ContractId: '1235562', Premium: '123', Comission: '587'},
+    {AgentId: '7896', ProductId: '074', ContractId: '01', Premium: '1', Comission: '562'},
+    {AgentId: '125', ProductId: '1346', ContractId: '21115', Premium: '19', Comission: '0'},
+    {AgentId: '123', ProductId: '345341', ContractId: '1235562', Premium: '123', Comission: '587'},
+    {AgentId: '7896', ProductId: '074', ContractId: '01', Premium: '1', Comission: '562'},
+    {AgentId: '125', ProductId: '1346', ContractId: '21115', Premium: '19', Comission: '0'},
+]
+
+export const admin_prem_com = [
+    {ProductId: '123', SumPremium: '31634', SumComission: '1245135', AgentId: '234'},
+    {ProductId: '132531', SumPremium: '000', SumComission: '1244', AgentId: '1243'},
+    {ProductId: '666', SumPremium: '1488', SumComission: '228', AgentId: '895494'},
+    {ProductId: '123', SumPremium: '31634', SumComission: '1245135', AgentId: '234'},
+    {ProductId: '132531', SumPremium: '000', SumComission: '1244', AgentId: '1243'},
+    {ProductId: '666', SumPremium: '1488', SumComission: '228', AgentId: '895494'},
+    {ProductId: '123', SumPremium: '31634', SumComission: '1245135', AgentId: '234'},
+    {ProductId: '132531', SumPremium: '000', SumComission: '1244', AgentId: '1243'},
+    {ProductId: '666', SumPremium: '1488', SumComission: '228', AgentId: '895494'},
+    {ProductId: '123', SumPremium: '31634', SumComission: '1245135', AgentId: '234'},
+    {ProductId: '132531', SumPremium: '000', SumComission: '1244', AgentId: '1243'},
+    {ProductId: '666', SumPremium: '1488', SumComission: '228', AgentId: '895494'},
+    {ProductId: '123', SumPremium: '31634', SumComission: '1245135', AgentId: '234'},
+    {ProductId: '132531', SumPremium: '000', SumComission: '1244', AgentId: '1243'},
+    {ProductId: '666', SumPremium: '1488', SumComission: '228', AgentId: '895494'},
+]

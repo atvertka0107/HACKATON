@@ -12,8 +12,10 @@ import AdminStartPage from './pages/AdminStartPage'
 import AdminReportDataPage from './pages/AdminReportDataPage'
 import AdminInsuranceProductsPage from './pages/AdminInsuranceProductsPage'
 import AdminViewConractConversionPage from './pages/AdminViewConractConversionPage'
-import AdminCreateProductPage from './pages/AdminCreateProductPage';
-import AdminListProduct from './pages/AdminListProduct'
+import AdminChangeProductPage from './pages/AdminChangeProductPage'
+import AdminGeneralPremiumPage from './pages/AdminGeneralPremiumPage'
+import AdminPremiumComissionPage from './pages/AdminPremiumComissionPage'
+import AdminViewSalesDataPage from './pages/AdminViewSalesDataPage'
 
 const router = createBrowserRouter([
   {
@@ -54,12 +56,20 @@ const router = createBrowserRouter([
     element: <AdminViewConractConversionPage />
   },
   {
-    path: '/admin/create_product',
-    element: <AdminCreateProductPage />
+    path: '/admin/change_product',
+    element: <AdminChangeProductPage/>
   },
   {
-    path: 'admin/products_list', 
-    element: <AdminListProduct />
+    path: '/admin/general_premium',
+    element: <AdminGeneralPremiumPage/>
+  },
+  {
+    path: '/admin/premium_commission',
+    element: <AdminPremiumComissionPage/>
+  },
+  {
+    path: '/admin/view_sales_data',
+    element: <AdminViewSalesDataPage/>
   },
 ]);
 

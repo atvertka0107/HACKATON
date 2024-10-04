@@ -30,17 +30,25 @@
     cursor: pointer;
 }
 
-.date {
+.fl{
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
 }
 
-.date:hover{
+.fl:hover{
     border-left: none;
 }
 
 .flag:hover{
     background-color: #959595;
+}
+
+.prop{
+    display: flex;
+    width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .project {
@@ -52,12 +60,4 @@
     border-radius: 10px;
     background-color: #fff;
     padding: 20px;
-}
-
-.prop{
-    display: flex;
-    width: 500px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
