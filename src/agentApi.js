@@ -4,10 +4,17 @@ const apiEndpoint = 'http://localhost:8084/agent'
 
 const api = {
     getContracts: async () => {
-        const response = await axios.get(`${apiEndpoint}/contracts`);
-        return response.data;
+        try{
+            const response = await axios.get(`${apiEndpoint}/contracts`);
+            return response.data;
+        }
+                                                                  
+        catch (error) {
+            console.error('Ошибка при получении данных:', error);
+        }
+        throw error;
     },
-    getContractById: async (contractId) => {
+    getContractById: async (contractId) => {                                                                                                                 
         const response = await axios.get(`${apiEndpoint}/contracts/${contractId}`);
         return response.data;
     },
@@ -20,11 +27,15 @@ const api = {
         return response.data;
     },
     deleteContract: async (contractId) => {
-        const response = await axios.post(`${apiEndpoint}/contracts/delete/${contractId}`)
+        const response = await axios.post(`${apiEndpoint}/contracts/delete/${contractId}`);
         return response.data;
     },
     terminateContract: async (contractId) => {
         const response = await axios.post(`${apiEndpoint}/contracts/terminate/${contractId}`);
+        return response.data;
+    },
+    getProductList: async () => {
+        const response = await axios.get(`${apiEndpoint}/product/list`);
         return response.data;
     }
 };
