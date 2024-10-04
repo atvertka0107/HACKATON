@@ -10,7 +10,8 @@ import ErrorPage from './pages/ErrorPage'
 
 import { createBrowserRouter, RouterProvider, BrowserRouter } from 'react-router-dom'
 import AdminStartPage from './pages/AdminStartPage'
-import ReportDataPage from './pages/ReportDataPage'
+import AdminReportDataPage from './pages/AdminReportDataPage'
+import AdminInsuranceProductsPage from './pages/AdminInsuranceProductsPage'
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/admin/report_data',
-    element: <ReportDataPage />
+    element: <AdminReportDataPage />
+  },
+  {
+    path: '/admin/insurance_products',
+    element: <AdminInsuranceProductsPage />
   },
 ]);
 
