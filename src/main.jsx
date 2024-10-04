@@ -36,10 +36,6 @@ const router = createBrowserRouter([
     element: <InsuaranceProductsPage />,
   },
   {
-    path: '/view_contract',
-    element: <ViewContractPage />
-  },
-  {
     path: '/admin',
     element: <AdminStartPage />
   },
@@ -71,6 +67,10 @@ const router = createBrowserRouter([
     path: '/admin/view_sales_data',
     element: <AdminViewSalesDataPage/>
   },
+  {
+    path: '/contract/:id',
+    element: <ViewContractPage />
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(

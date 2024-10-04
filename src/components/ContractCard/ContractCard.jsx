@@ -1,4 +1,5 @@
 import { contract_card_text } from '../../data';
+import { Link }  from 'react-router-dom'
 import classes from './ContractCard.module.css'
 
 export default function ContractCard({information}){
@@ -11,7 +12,7 @@ export default function ContractCard({information}){
                 <div className={classes.sectionBlock}>
                 <div className={classes.section}>
                     <span className={classes.infoLabel}>{contract_card_text.insuredPersonId}</span>
-                    <span className={classes.info}>{information.insuredPersonId}</span>
+                   <span className={classes.info}><Link to={`/contract/${insuredPersonId}`}>{information.insuredPersonId}</ Link></span>
                 </div>
                 <div className={classes.section}>
                     <span className={classes.infoLabel}>{contract_card_text.Name}</span>
