@@ -7,12 +7,14 @@ import ContractSignPage from './pages/ContractSignPage'
 import InsuaranceProductsPage from './pages/InsuranceProductsPage'
 import ViewContractPage from './pages/ViewContractPage'
 import ErrorPage from './pages/ErrorPage'
+
+<<<<<<< HEAD
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+=======
+import { createBrowserRouter, RouterProvider, BrowserRouter } from 'react-router-dom'
 import AdminStartPage from './pages/AdminStartPage'
-import AdminReportDataPage from './pages/AdminReportDataPage'
-import AdminInsuranceProductsPage from './pages/AdminInsuranceProductsPage'
-import AdminCreateProductPage from './pages/AdminCreateProductPage';
-import AdminListProduct from './pages/AdminListProduct'
+import ReportDataPage from './pages/ReportDataPage'
+>>>>>>> 0277c7aeaeaf0a32f58870ca90a148eee9c8e5c9
 
 const router = createBrowserRouter([
   {
@@ -42,19 +44,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/admin/report_data',
-    element: <AdminReportDataPage />
-  },
-  {
-    path: '/admin/insurance_products',
-    element: <AdminInsuranceProductsPage />
-  },
-  {
-    path: '/admin/create_product',
-    element: <AdminCreateProductPage />
-  },
-  {
-    path: 'admin/products_list', 
-    element: <AdminListProduct />
+    element: <ReportDataPage />
   },
 ]);
 

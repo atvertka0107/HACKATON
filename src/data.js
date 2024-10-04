@@ -79,5 +79,17 @@ export const agent_header_text = [
 ]
 
 export const admin_header_text = [
-    ["/admin", 'Начальная страница', '../src/refs/Admin panel settings.svg']
+    ["/admin", 'Начальная страница', '../src/refs/Admin panel settings.svg'], 
+    ["/admin/products_list", 'Продукты страхования', '../src/refs/Vector.svg'],
 ]
+
+export const adminCreateForm = {
+    form_name_product: 'Введите название продукта',
+    LOB_text: [
+        {id: 'OSAGO', value: 'ОСАГО'}, 
+        {id: 'CASCO', value: 'КАСКО'},
+        {id: 'THI', value: 'Страхование путешественников'},
+        {id: 'ACCIDENT', value: 'Страхование от несчастных случаев'},
+    ],
+    button_create: 'Создать',
+}

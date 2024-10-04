@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import {createRoot} from 'react-dom/client'
 import './main.css'
 import HelloPage from './pages/HelloPage'
 import ContractHistoryPage from './pages/ContractHistoryPage'
@@ -7,12 +7,8 @@ import ContractSignPage from './pages/ContractSignPage'
 import InsuaranceProductsPage from './pages/InsuranceProductsPage'
 import ViewContractPage from './pages/ViewContractPage'
 import ErrorPage from './pages/ErrorPage'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import AdminStartPage from './pages/AdminStartPage'
-import AdminReportDataPage from './pages/AdminReportDataPage'
-import AdminInsuranceProductsPage from './pages/AdminInsuranceProductsPage'
-import AdminCreateProductPage from './pages/AdminCreateProductPage';
-import AdminListProduct from './pages/AdminListProduct'
+
+import { createBrowserRouter, RouterProvider, BrowserRouter } from 'react-router-dom'
 
 const router = createBrowserRouter([
   {
@@ -35,26 +31,6 @@ const router = createBrowserRouter([
   {
     path: '/view_contract',
     element: <ViewContractPage />
-  },
-  {
-    path: '/admin',
-    element: <AdminStartPage />
-  },
-  {
-    path: '/admin/report_data',
-    element: <AdminReportDataPage />
-  },
-  {
-    path: '/admin/insurance_products',
-    element: <AdminInsuranceProductsPage />
-  },
-  {
-    path: '/admin/create_product',
-    element: <AdminCreateProductPage />
-  },
-  {
-    path: 'admin/products_list', 
-    element: <AdminListProduct />
   },
 ]);
 
