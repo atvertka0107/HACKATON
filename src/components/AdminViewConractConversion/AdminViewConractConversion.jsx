@@ -67,7 +67,7 @@ export default function AdminViewConractConversion(){
                 <input
                     className={classes.input}
                     type="text" 
-                    placeholder="Продукт"
+                    placeholder="Id продукта"
                     value={name}
                     onChange = {(event) => setName(event.target.value)}
                     />

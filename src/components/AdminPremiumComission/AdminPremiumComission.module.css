@@ -1,0 +1,29 @@
+.project {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.prop{
+    display: flex;
+    width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.heading{
+    display: flex;
+    width: 100%;
+}   
+
+.label{
+    display: flex;
+    width: 100%;
+    font-size: 18px;
+}
