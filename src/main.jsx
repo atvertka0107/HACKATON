@@ -80,7 +80,7 @@ const router = createBrowserRouter([
   {
     path: '/contract/:id',
     element: <ViewContractPage />
-  }
+  },
 ]);
 
 createRoot(document.getElementById('root')).render(

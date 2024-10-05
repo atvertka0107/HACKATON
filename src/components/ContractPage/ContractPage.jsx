@@ -1,18 +1,21 @@
 import classes from './ContractPage.module.css'
-import { Status } from "../../data";
+import { StatusRequest } from "../../data";
 import { contracts_full } from '../../data';
 import { useState, useEffect } from 'react';
 import Button from '../Button/Button';
 
 export default function ContractPage({ID}){
-    const [contract, setContract] = useEffect();
-    const [status, setStatus] = useState(contract.Status);
+    
+    const [contract, setContract] = useState({});
+    const [status, setStatus] = useState([]);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const getProds = async () => {
             setLoading(true)
             const res = contracts_full[ID];
+            const res_2 = StatusRequest;
+            setStatus(res_2);
             setContract(res);
             setLoading(false)
         }
@@ -20,23 +23,23 @@ export default function ContractPage({ID}){
         getProds();
     }, [])
 
-    useEffect(() => {
-        const getProds = async () => {
-            setLoading(true)
-            const res = Status;
-            setStatus(res);
-            setLoading(false)
-        }
+    // useEffect(() => {
+    //     const getProds = async () => {
+    //         setLoading(true)
+    //         const res = Status;
+    //         setStatus(res);
+    //         setLoading(false)
+    //     }
         
-        getProds();
-    }, [])
+    //     getProds();
+    // }, [])
 
-    let optionsStatus = Status.map(function(item){
+    let optionsStatus = status.map(function(item){
+        if(loading){
+            return <h2>Loading...</h2>
+        }
         return <option value={item.Id}>{item.Name}</option>;
     });
-    if(loading){
-        return <h2>Loading...</h2>
-    }
     return(
         <div className={classes.pageContainer}>
             <div className={classes.section}>

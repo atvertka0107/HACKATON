@@ -1,5 +1,4 @@
 import { Status } from '../../data';
-import { contract_card_text } from '../../data';
 import { Link }  from 'react-router-dom'
 import classes from './ContractCard.module.css'
 
